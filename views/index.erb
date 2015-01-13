@@ -1,0 +1,17 @@
+<h1>Welcome to The Travel Log</h1>
+
+<h3>Oh, the Places You've Been!</h3>
+
+<ul>
+  <% @places.each() do |place| %>
+    <li><%= place.place() %> </li>
+  <% end %>
+</ul>
+
+<p>Tell me where you've been:</p>
+
+<form action="/place_added" method="post">
+  <label for="place">Place:</label>
+  <input id="place" name="place" type="text">
+  <button type="submit" class="btn-primary">Log it!</button>
+</form>
